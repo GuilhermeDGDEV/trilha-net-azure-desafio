@@ -22,6 +22,7 @@ namespace TrilhaNetAzureDesafio.Models
             JSON = JsonSerializer.Serialize(funcionario);
             PartitionKey = partitionKey;
             RowKey = rowKey;
+            Timestamp = DateTime.Now;
         }
 
         public TipoAcao TipoAcao { get; set; }

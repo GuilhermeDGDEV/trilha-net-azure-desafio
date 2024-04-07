@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using TrilhaNetAzureDesafio.Context;
 
 var builder = WebApplication.CreateBuilder(args);
-
+Console.WriteLine(builder.Configuration.GetConnectionString("ConexaoPadrao"));
 // Add services to the container.
 builder.Services.AddDbContext<RHContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
